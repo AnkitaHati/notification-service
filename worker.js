@@ -1,4 +1,5 @@
 // worker.js
+require('dotenv').config();
 const amqp = require('amqplib');
 const mongoose = require('mongoose');
 const Notification = require('./models/notification');
