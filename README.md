@@ -42,7 +42,7 @@ This is a Notification Service built using **Node.js**, **Express**, **MongoDB**
 
  2. Get User Notifications
 
-GET /users/:id/notifications
+    GET /users/:id/notifications
 
 - Description: Retrieve all notifications for a specific user.
 
@@ -54,21 +54,26 @@ GET /users/:id/notifications
 
 1) Clone the repository:
 
-git clone <your-repo-link>
+```bash
+git clone https://github.com/AnkitaHati/notification-service.git
 cd notification-service
+```
 
 2) Install dependencies:
 
+```bash
 npm install
+```
 
 3) Configure environment variables:
  
 Create a .env file in the root directory and add:
 
+```bash
 MONGODB_URI=mongodb+srv://[username]:[password]@[cluster-url]/notifications_db
 RABBITMQ_URL=amqp://localhost
 PORT=3000
-
+```
 -Replace [username], [password], and [cluster-url] with your actual MongoDB Atlas values.
 
 4) Start the app
