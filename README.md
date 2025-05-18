@@ -41,8 +41,10 @@ This is a Notification Service built using **Node.js**, **Express**, **MongoDB**
 ```
 
  2. Get User Notifications
+
 GET /users/:id/notifications
-Description: Retrieve all notifications for a specific user.
+
+- Description: Retrieve all notifications for a specific user.
 
   Postman Collection
 🔗 [Click here to view and import the API Collection in Postman](https://ankitahati.postman.co/workspace/Ankita-Hati's-Workspace~d9731949-e084-49d4-853c-052be74c7c28/collection/45045253-0c29e55a-459a-4863-b0cf-29e048b33748?action=share&creator=45045253)
@@ -63,13 +65,13 @@ npm install
  
 Create a .env file in the root directory and add:
 
-MONGODB_URI=mongodb+srv://<username>:<password>@<cluster-url>/notifications_db
+MONGODB_URI=mongodb+srv://[username]:[password]@[cluster-url]/notifications_db
 RABBITMQ_URL=amqp://localhost
 PORT=3000
 
--Replace <username>, <password>, and <cluster-url> with your actual MongoDB Atlas values.
+-Replace [username], [password], and [cluster-url] with your actual MongoDB Atlas values.
 
-4)Start the app
+4) Start the app
 Start both the main server and the worker:
 
 
