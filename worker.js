@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Notification = require('./models/notification');
 
 // MongoDB connection
-const mongoURI = 'mongodb+srv://notificationApp:notificationApp@notificationcluster.nsbljha.mongodb.net/notifications_db?retryWrites=true&w=majority';
+const mongoURI = process.env.MONGO_URI;
 
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
