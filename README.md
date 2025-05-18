@@ -38,6 +38,8 @@ This is a Notification Service built using **Node.js**, **Express**, **MongoDB**
   "type": "email",
   "message": "Welcome to our platform!"
 }
+```
+
  2. Get User Notifications
 GET /users/:id/notifications
 Description: Retrieve all notifications for a specific user.
@@ -85,9 +87,9 @@ node worker.js      # Starts the background queue worker
 
 📌 Assumptions:
 
-*A single MongoDB collection (notifications) stores all types of notifications.
-*Notification sending is mocked (actual Email/SMS providers not integrated).
-*Worker listens to queue and simulates delivery status (success/failure).
+* A single MongoDB collection (notifications) stores all types of notifications.
+* Notification sending is mocked (actual Email/SMS providers not integrated).
+* Worker listens to queue and simulates delivery status (success/failure).
 
 ## API Documentation
 
@@ -98,9 +100,9 @@ Interactive API documentation is available via the Postman Collection:
 
 🛠 Future Improvements:
 
-*Add support for real Email and SMS providers (e.g., SendGrid, Twilio)
-*UI Dashboard for viewing and sending notifications
-*In-app notification socket integration (real-time updates)
+* Add support for real Email and SMS providers (e.g., SendGrid, Twilio)
+* UI Dashboard for viewing and sending notifications
+* In-app notification socket integration (real-time updates)
 
 ## License
 
