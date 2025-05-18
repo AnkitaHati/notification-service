@@ -3,14 +3,15 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const Notification = require('./models/notification'); // Mongoose model
 const sendToQueue = require('./sendToQueue'); // RabbitMQ producer
+require('dotenv').config(); // Load environment variables from .env
 
 const app = express();
 const port = 3000;
 
 app.use(bodyParser.json());
 
-// MongoDB connection string
-const mongoURI = 'mongodb+srv://notificationApp:notificationApp@notificationcluster.nsbljha.mongodb.net/notifications_db?retryWrites=true&w=majority';
+// ✅ Secure MongoDB connection string
+const mongoURI = process.env.MONGO_URI;
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('✅ Connected to MongoDB'))
@@ -49,7 +50,7 @@ app.post('/notifications', async (req, res) => {
   }
 });
 
-// ✅ GET /users/:id/notifications - Fetch from MongoDB
+// GET /users/:id/notifications - Fetch from MongoDB
 app.get('/users/:id/notifications', async (req, res) => {
   try {
     const userId = req.params.id;
